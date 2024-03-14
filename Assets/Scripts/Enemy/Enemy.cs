@@ -11,7 +11,7 @@ public class Enemy : MonoBehaviour
     
     void Start()
     {
-        //Invoke(nameof(Shoot), Random.Range(0, 60));
+        Invoke(nameof(Shoot), Random.Range(0, 60));
     }
     
     private void Shoot()
@@ -27,6 +27,5 @@ public class Enemy : MonoBehaviour
         //Debug.Log("Ouch!");
         FindObjectOfType<GameManager>().AddDestroyedEnemy(gameObject);
         FindObjectOfType<GameManager>().AddScore(score);
-        Destroy(gameObject);
     }
 }

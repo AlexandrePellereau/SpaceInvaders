@@ -11,13 +11,21 @@ public class Player : MonoBehaviour
     [Header("Movement Settings")]
     public float speed = 3f;
     public float border = 12;
+    
+    private AudioManager _audioManager;
+    
+    void Start()
+    {
+        _audioManager = FindObjectOfType<AudioManager>();
+    }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             GameObject shot = Instantiate(bullet, shottingOffset.position, Quaternion.identity);
-            Debug.Log("Bang!");
+            //Debug.Log("Bang!");
+            _audioManager.Play("PlayerShoot");
 
             Destroy(shot, 3f);
         }
