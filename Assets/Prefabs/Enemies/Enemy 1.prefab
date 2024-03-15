@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 6055069717150008154}
   - component: {fileID: 5948996942061377388}
   - component: {fileID: 4988884264498715822}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy 1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -144,3 +144,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 20
   enemyBullet: {fileID: 2457785739244962049, guid: f87ab8a5cbebfdd448cf85f695b97d16, type: 3}
+  explosion: {fileID: 3849931227248746371, guid: f10663e9cf224d646ba69e0639d71655, type: 3}

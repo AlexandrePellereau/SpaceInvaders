@@ -123,6 +123,50 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &13677780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 13677781}
+  - component: {fileID: 13677782}
+  m_Layer: 0
+  m_Name: SceneManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &13677781
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13677780}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 572.43896, y: 324.25555, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &13677782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13677780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 505f9160336b720409d1d529d9bfd379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &230145219
 GameObject:
   m_ObjectHideFlags: 0
@@ -170,12 +214,30 @@ MonoBehaviour:
   sounds:
   - name: Theme
     clip: {fileID: 8300000, guid: e6804c7b5521b994d981ced166828581, type: 3}
-    volume: 0.5
+    volume: 0.2
     pitch: 1
     loop: 1
     source: {fileID: 0}
   - name: PlayerShoot
     clip: {fileID: 8300000, guid: 06a24549dc4023f45abd5abd970a9fc0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyShoot
+    clip: {fileID: 8300000, guid: e67ba03a069fd3145a72bc950a54fed6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 7a52cf5da2fa69f48b37de8c99136f04, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 34c8f7df8012aff44b6d0805427b08db, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -427,6 +489,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 129043850064504577, guid: 46f7c04cfd4b73e49a865596061b9ab8, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 129043850064504577, guid: 46f7c04cfd4b73e49a865596061b9ab8, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4447747329123161577, guid: 46f7c04cfd4b73e49a865596061b9ab8, type: 3}
@@ -789,7 +855,7 @@ MonoBehaviour:
   - {fileID: 7483517710255911465, guid: fb7678f9761528340b370ed8c91bd330, type: 3}
   - {fileID: 7483517710255911465, guid: f9720d4bd8f07f846807a670de3e307c, type: 3}
   - {fileID: 7483517710255911465, guid: c9f0df416ffa74e4e946620e343efd3f, type: 3}
-  - {fileID: 7483517710255911465, guid: c3b77266ea0668e4289e92aa866a25ed, type: 3}
+  - {fileID: 7483517710255911465, guid: dee7edde0bccd9844bf8744ece15713c, type: 3}
   barricadeSpawnPoint: {x: -9, y: -4}
   distanceBetweenBarricades: 6
   barricade: {fileID: 446600519035148241, guid: 48c51d76b68561d4cb2886d0dca185a6, type: 3}
@@ -1020,3 +1086,4 @@ SceneRoots:
   - {fileID: 1811448835}
   - {fileID: 381662680}
   - {fileID: 230145220}
+  - {fileID: 13677781}

@@ -73,7 +73,7 @@ public class GameManager : MonoBehaviour
         if (_enemyInstances.Count == 0)
         {
             Debug.Log("You win!");
-            SpawnEnemies();
+            FindObjectOfType<SceneManager>().ShowCredits();
         }
     }
     
@@ -95,5 +95,10 @@ public class GameManager : MonoBehaviour
     public int GetTotalEnemies()
     {
         return enemies.Count * enemiesPerLine;
+    }
+    
+    public List<GameObject> GetEnemies()
+    {
+        return _enemyInstances;
     }
 }

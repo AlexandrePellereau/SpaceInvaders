@@ -21,7 +21,18 @@ public class AudioManager : MonoBehaviour
     
     void Start()
     {
-        Play("Theme");
+        switch (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
+        {
+            case "Main Game":
+                Play("Theme");
+                break;
+            case "Credits":
+                Play("StarWarsTheme");
+                break;
+            default:
+                Play("Theme");
+                break;
+        }
     }
     
     public void Play(string name)
