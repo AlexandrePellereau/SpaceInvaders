@@ -852,9 +852,9 @@ MonoBehaviour:
   distanceBetweenEnemies: 1.5
   enemiesPerLine: 11
   enemies:
-  - {fileID: 7483517710255911465, guid: fb7678f9761528340b370ed8c91bd330, type: 3}
-  - {fileID: 7483517710255911465, guid: f9720d4bd8f07f846807a670de3e307c, type: 3}
-  - {fileID: 7483517710255911465, guid: c9f0df416ffa74e4e946620e343efd3f, type: 3}
+  - {fileID: 7483517710255911465, guid: d5532855aa00ede40af4122f383daf34, type: 3}
+  - {fileID: 7483517710255911465, guid: 25ae1ab7b340c17458a3045b11319d5b, type: 3}
+  - {fileID: 7483517710255911465, guid: 495192fd53c60d14bad342635beb3352, type: 3}
   - {fileID: 7483517710255911465, guid: dee7edde0bccd9844bf8744ece15713c, type: 3}
   barricadeSpawnPoint: {x: -9, y: -4}
   distanceBetweenBarricades: 6

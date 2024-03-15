@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     
     [Header("Prefabs")]
     public GameObject enemyBullet;
+    public Material explosionMaterial;
     
     [Header("Sprites")]
     public Sprite[] sprites;
@@ -56,5 +57,10 @@ public class Enemy : MonoBehaviour
             _spriteIndex = newSpriteIndex;
             _spriteRenderer.sprite = sprites[_spriteIndex];
         }
+    }
+    
+    public Material GetExplosionMaterial()
+    {
+        return explosionMaterial;
     }
 }

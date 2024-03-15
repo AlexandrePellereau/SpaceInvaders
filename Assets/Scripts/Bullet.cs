@@ -32,6 +32,8 @@ public class Bullet : MonoBehaviour
       Destroy(gameObject);
       Destroy(collision.gameObject);
       GameObject go = Instantiate(explosion, transform.position, Quaternion.identity);
-      go.GetComponent<Renderer>().material.color = collision.gameObject.GetComponent<Renderer>().material.color;
+      go.GetComponent<Renderer>().material.color = collision.gameObject.CompareTag("Enemy") ? 
+        collision.gameObject.GetComponent<Enemy>().explosionMaterial.color :
+        collision.gameObject.GetComponent<Renderer>().material.color;
     }
 }

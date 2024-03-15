@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6604860522166403265}
   - component: {fileID: 5948996942061377388}
   - component: {fileID: 4988884264498715822}
-  - component: {fileID: -3310008253143175707}
+  - component: {fileID: -4021668510260804237}
   m_Layer: 6
   m_Name: Enemy 0
   m_TagString: Enemy
@@ -69,10 +69,10 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.3603804, y: 1.7800001}
+    newSize: {x: 2.3603804, y: 1.7800001}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -93,10 +93,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   enemyBullet: {fileID: 2457785739244962049, guid: f87ab8a5cbebfdd448cf85f695b97d16, type: 3}
+  explosionMaterial: {fileID: 2100000, guid: 5958bea04d407e74a9777cb693d1d94d, type: 2}
   sprites:
   - {fileID: 160480870, guid: b3485fc2c07ab5d43bb7dac28fa1cac2, type: 3}
   - {fileID: 209157632, guid: b3485fc2c07ab5d43bb7dac28fa1cac2, type: 3}
---- !u!212 &-3310008253143175707
+--- !u!212 &-4021668510260804237
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +117,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5958bea04d407e74a9777cb693d1d94d, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,7 +139,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.9529412, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
