@@ -17,6 +17,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
       _myRigidbody2D = GetComponent<Rigidbody2D>();
+      Physics2D.IgnoreCollision(FindObjectOfType<Player>().gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
       Fire();
     }
 
@@ -29,6 +30,8 @@ public class Bullet : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D collision)
     {
+      if (collision.gameObject.CompareTag("Player")) return;
+      
       Destroy(gameObject);
       Destroy(collision.gameObject);
       GameObject go = Instantiate(explosion, transform.position, Quaternion.identity);
